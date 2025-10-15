@@ -1,24 +1,13 @@
-import logo from './logo.svg';
 import './App.css';
+import SignIn from './components/SignIn'
 
 function App() {
+  const handleSignIn = (userEmail) => {
+    console.log(`User signed in: ${userEmail}`);
+  };
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <SignIn onSignIn={handleSignIn} success="has successfully signed in!" failed = "Invalid email or password. Please try again." />
   );
 }
 

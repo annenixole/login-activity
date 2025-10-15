@@ -1,0 +1,164 @@
+.signIn{
+  display: flex;
+  min-height: 100vh;
+  align-items: center;
+  padding: 0px 12px;
+  box-sizing: border-box;
+  font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  color: #1b1b1b;
+}
+.contentLeft{
+  flex: 1;
+  min-height: 700px;
+  border-radius: 24px;
+  background-image: url('../elements/lionsHead.jpg');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  color: white;
+}
+
+.contentLeft::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(11, 43, 3, 0.415); /* green tint (adjust alpha as desired) */
+  border-radius: inherit;
+  z-index: 0;
+} 
+
+.contentLeft * {
+  position: relative;
+  z-index: 1;
+}
+
+.contentLeft img{ 
+    display: none; 
+}
+
+.contentLeft h1{
+  font-size: 48px;
+  line-height: 1.02;
+  margin: 0 12px 18px;
+  font-weight: 700;
+  text-shadow: 0 6px 20px rgba(0,0,0,0.45);
+}
+
+.contentLeft p{
+  font-size: 18px;
+  max-width: 520px;
+  margin: 0 12px 28px;
+  text-shadow: 0 4px 14px rgba(0,0,0,0.35);
+}
+
+/* Right: form panel (visual left side in screenshot) */
+.contentRight{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+  padding: 8px 80px;
+}
+
+/* Logo area */
+.logoContainer{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+.logoContainer img{
+  width: 120px;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Titles */
+.contentRight > h1{
+  font-size: 28px;
+  margin: 12px 0 4px;
+  font-weight: 700;
+}
+.contentRight > h6{
+  margin: 0 0 18px;
+  color: #4b5a33;
+  font-weight: 500;
+}
+
+/* Card with form */
+.formContainer{
+  width: 100%;
+  max-width: 520px;
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 28px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.06);
+  border: 1px solid rgba(0,0,0,0.04);
+  box-sizing: border-box;
+}
+
+.formContainer h3{
+  margin: 0 0 6px;
+  font-size: 20px;
+  font-weight: 700;
+}
+.formContainer p{
+  margin: 0 0 18px;
+  color: #6b6b6b;
+}
+
+/* Inputs */
+.formContainer form{
+  display:flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.formContainer input{
+  height: 48px;
+  border-radius: 12px;
+  border: 1px solid #e6e6e6;
+  padding: 0 16px;
+  font-size: 15px;
+  outline: none;
+  transition: box-shadow .15s, border-color .15s;
+}
+
+.formContainer input:focus{
+  box-shadow: 0 6px 18px rgba(34,34,34,0.06);
+  border-color: #cfcfcf;
+}
+
+/* Submit button like screenshot: black background with orange text */
+.formContainer button{
+  margin-top: 6px;
+  height: 52px;
+  border-radius: 12px;
+  border: none;
+  background: #111111;
+  color: #ff8c2a; /* orange label */
+  font-weight: 700;
+  letter-spacing: 0.6px;
+  cursor: pointer;
+  box-shadow: 0 6px 18px rgba(17,17,17,0.18);
+}
+
+/* Small links and foot text */
+.formContainer .small{
+  text-align: center;
+  margin-top: 12px;
+  color: #6b6b6b;
+}
+
+/* Responsive */
+@media (max-width: 980px){
+  .signIn{ flex-direction: column; padding: 28px; gap: 20px; }
+  .contentLeft, .contentRight{ width: 100%; max-width: 100%; }
+  .contentLeft{ min-height: 360px; border-radius: 14px; }
+  .formContainer{ padding: 20px; }
+}

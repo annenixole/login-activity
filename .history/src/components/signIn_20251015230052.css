@@ -1,0 +1,153 @@
+/* Layout */
+.signIn {
+  display: flex;
+  gap: 48px;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 64px;
+  font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background: #f5f5f5;
+  color: #1b1b1b;
+  box-sizing: border-box;
+}
+
+/* Left Panel (Image Section) */
+.contentLeft {
+  flex: 1;
+  min-height: 640px;
+  border-radius: 24px;
+  background-image: url('../elements/lionsHead.jpg');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  color: white;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+}
+
+.contentLeft h1 {
+  font-size: 48px;
+  margin-bottom: 12px;
+  font-weight: 700;
+  text-shadow: 0 8px 24px rgba(0,0,0,0.5);
+}
+
+.contentLeft p {
+  font-size: 18px;
+  max-width: 520px;
+  text-shadow: 0 6px 20px rgba(0,0,0,0.4);
+}
+
+/* Right Panel (Form Section) */
+.contentRight {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  padding: 20px 80px;
+}
+
+/* Logo Section */
+.logoContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+.logoContainer img {
+  width: 120px;
+  object-fit: contain;
+}
+
+/* Headings */
+.contentRight > h1 {
+  font-size: 32px;
+  font-weight: 700;
+  margin: 8px 0 4px;
+}
+
+.contentRight > h6 {
+  margin: 0 0 18px;
+  color: #4b5a33;
+  font-weight: 500;
+}
+
+/* Card */
+.formContainer {
+  width: 100%;
+  max-width: 480px;
+  background: #fff;
+  border-radius: 16px;
+  padding: 32px;
+  box-shadow: 0 12px 32px rgba(0,0,0,0.08);
+  border: 1px solid rgba(0,0,0,0.05);
+  text-align: center;
+}
+
+.formContainer h3 {
+  margin-bottom: 6px;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.formContainer p {
+  margin-bottom: 18px;
+  color: #666;
+}
+
+/* Inputs */
+.formContainer input {
+  height: 48px;
+  border-radius: 12px;
+  border: 1px solid #e2e2e2;
+  padding: 0 16px;
+  font-size: 15px;
+  transition: box-shadow .2s, border-color .2s;
+}
+
+.formContainer input:focus {
+  border-color: #ff8c2a;
+  box-shadow: 0 0 0 3px rgba(255,140,42,0.15);
+}
+
+/* Button */
+.formContainer button {
+  margin-top: 10px;
+  height: 52px;
+  border-radius: 12px;
+  border: none;
+  background: #111;
+  color: #ff8c2a;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  transition: transform .15s, box-shadow .15s;
+}
+
+.formContainer button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(17,17,17,0.2);
+}
+
+/* Responsive */
+@media (max-width: 980px) {
+  .signIn {
+    flex-direction: column;
+    padding: 24px;
+  }
+  .contentLeft {
+    min-height: 360px;
+    border-radius: 16px;
+    width: 100%;
+  }
+  .contentRight {
+    padding: 20px;
+  }
+}
